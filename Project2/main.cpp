@@ -5,7 +5,7 @@ using namespace std;
 #include"SerialPort.h"
 
 char output[MAX_DATA_LENGTH];
-const char* port = "\\\\.\\COM3";
+const char* port = "\\\\.\\COM6";
 
 int main() {
 	system("D://Video//1.mp4");
