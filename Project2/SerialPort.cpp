@@ -2,7 +2,7 @@
 
 SerialPort::SerialPort(const char* portName)
 {
-    this->connected = false;
+    this->connected = false;  
 
     this->handler = CreateFileA(static_cast<LPCSTR>(portName),
         GENERIC_READ | GENERIC_WRITE,
@@ -22,7 +22,6 @@ SerialPort::SerialPort(const char* portName)
     }
     else {
         DCB dcbSerialParameters = { 0 };
-
         if (!GetCommState(this->handler, &dcbSerialParameters)) {
             printf("failed to get current serial parameters");
         }
